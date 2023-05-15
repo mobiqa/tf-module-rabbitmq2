@@ -1,1 +1,1 @@
-# tf-module-rabbitmq2
+# tf-module-subnets
