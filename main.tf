@@ -27,7 +27,7 @@ resource "aws_security_group" "rabbitmq" {
  resource "aws_mq_configuration" "rabbitmq" {
    description    = "${var.env}-rabbitmq-configuration"
    name           = "${var.env}-rabbitmq-configuration"
-   engine_type    = var.engine_type
+#   engine_type    = var.engine_type
    engine_version = var.engine_version
    data           = ""
  }
