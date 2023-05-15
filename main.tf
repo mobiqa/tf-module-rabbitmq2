@@ -24,19 +24,19 @@ resource "aws_security_group" "rabbitmq" {
   )
 }
 
- resource "aws_mq_configuration" "rabbitmq" {
-   description    = "${var.env}-rabbitmq-configuration"
-   name           = "${var.env}-rabbitmq-configuration"
+# resource "aws_mq_configuration" "rabbitmq" {
+#   description    = "${var.env}-rabbitmq-configuration"
+#   name           = "${var.env}-rabbitmq-configuration"
 #   engine_type    = var.engine_type
-   engine_version = var.engine_version
-   data           = ""
- }
-
+#   engine_version = var.engine_version
+#   data           = ""
+# }
+#
 
 resource "aws_mq_broker" "rabbitmq" {
   broker_name        = "${var.env}-rabbitmq"
   deployment_mode    = var.deployment_mode
-#  engine_type        = var.engine_type
+  engine_type        = var.engine_type
   engine_version     = var.engine_version
   host_instance_type = var.host_instance_type
   security_groups    = [aws_security_group.rabbitmq.id]
