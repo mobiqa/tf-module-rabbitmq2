@@ -44,7 +44,7 @@ resource "aws_iam_policy" "policy" {
           "ssm:GetParameter"
         ],
         "Resource" : [
-          "arn:aws:ssm:us-east-1:855509773460:parameter/${var.env}.${var.component}*"
+          "arn:aws:ssm:us-east-1:136325909517:parameter/${var.env}.${var.component}*"
         ]
       },
       {
@@ -149,7 +149,7 @@ resource "aws_spot_instance_request" "rabbitmq" {
 }
 
 resource "aws_route53_record" "rabbitmq" {
-  zone_id = "Z06519691L46QVNTMLXX8"
+  zone_id = "Z00885832UK82LPCXOMEO"
   name    = "rabbitmq-${var.env}.mobiqa.online"
   type    = "A"
   ttl     = 30
